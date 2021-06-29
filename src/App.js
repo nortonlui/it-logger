@@ -2,6 +2,8 @@ import React from 'react';
 import 'materialize-css/dist/css/materialize.min.css';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import './App.css';
+import SearchBar from './components/layout/SearchBar';
+import Logs from './components/logs/Logs';
 
 const App = () => {
   React.useEffect(() => {
@@ -10,9 +12,12 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h1>My App</h1>
-    </div>
+    <>
+      <SearchBar />
+      <div className="container">
+        <Logs />
+      </div>
+    </>
   );
 };
 
